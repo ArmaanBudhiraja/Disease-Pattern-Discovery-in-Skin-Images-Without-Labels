@@ -4,3 +4,9 @@ matplotlib
 scikit-learn
 scikit-image
 joblib
+tqdm
+pillow
+matplotlib
+fastapi
+uvicorn
+python-multipart
