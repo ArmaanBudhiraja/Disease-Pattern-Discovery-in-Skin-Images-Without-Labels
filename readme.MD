@@ -41,6 +41,8 @@ The system also provides **visual explainability and case-based retrieval** to h
 
 # System Architecture
 
+``` bash
+
 User Upload Image
 ↓
 Image Preprocessing
@@ -59,3 +61,4 @@ Explainability Heatmap
 Similar Image Retrieval
 ↓
 Results Displayed in Web Interface
+```
