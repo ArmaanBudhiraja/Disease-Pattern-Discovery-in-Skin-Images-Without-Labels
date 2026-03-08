@@ -13,3 +13,27 @@ This project explores an alternative approach by using:
 
 to detect and classify dermatological patterns without needing labeled training data for segmentation or deep learning models.
 The system also provides visual explainability and case-based retrieval to help understand predictions.
+
+## Key Features
+
+Image preprocessing and enhancement
+
+Lesion segmentation using color space analysis
+
+Feature extraction using:
+
+- Color histogram
+
+- GLCM texture features
+
+- Local Binary Patterns (LBP)
+
+Machine learning classification using SVM
+
+Explainability via heatmap visualization
+
+Case-based retrieval of similar images from the dataset
+
+Interactive web interface for uploading and analyzing images
+
+## System Architecture
