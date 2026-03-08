@@ -10,7 +10,7 @@ const Header = () => {
           </div>
           <div>
             <h1 className="text-base font-bold text-foreground tracking-tight">Skin Disease Detection System</h1>
-            <p className="text-[10px] text-muted-foreground uppercase tracking-widest">AI-Powered Dermatology Analysis</p>
+            <p className="text-[10px] text-muted-foreground uppercase tracking-widest">Dermatology Analysis</p>
           </div>
         </div>
         <div className="flex items-center gap-2 text-xs text-muted-foreground">

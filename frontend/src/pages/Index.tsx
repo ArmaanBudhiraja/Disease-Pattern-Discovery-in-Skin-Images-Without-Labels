@@ -55,7 +55,7 @@ const Index = () => {
 
     try {
       const formData = new FormData();
-      formData.append("image", file);
+      formData.append("file", file);
       const res = await fetch(API_URL, { method: "POST", body: formData });
       if (!res.ok) throw new Error("API request failed");
       const data = await res.json();

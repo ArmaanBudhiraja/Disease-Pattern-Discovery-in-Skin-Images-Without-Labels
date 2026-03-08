@@ -5,10 +5,19 @@ import uuid
 import cv2
 import base64
 
+from fastapi.middleware.cors import CORSMiddleware
 from backend.predict import predict_disease
 from backend.retrieval import find_similar_images
 
 app = FastAPI(title="Skin Disease Detection API")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], 
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 UPLOAD_DIR = "temp_uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
