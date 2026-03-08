@@ -1,9 +1,9 @@
 import joblib
 
-from preprocessing import preprocess_image
-from segmentation import segment_lesion, draw_lesion_boundary
-from feature_extraction import extract_features
-from explainability import generate_heatmap
+from backend.preprocessing import preprocess_image
+from backend.segmentation import segment_lesion, draw_lesion_boundary
+from backend.feature_extraction import extract_features
+from backend.explainability import generate_heatmap
 
 
 model = joblib.load("model.pkl")

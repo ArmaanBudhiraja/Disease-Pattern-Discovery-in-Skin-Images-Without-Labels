@@ -5,8 +5,8 @@ import uuid
 import cv2
 import base64
 
-from predict import predict_disease
-from retrieval import find_similar_images
+from backend.predict import predict_disease
+from backend.retrieval import find_similar_images
 
 
 app = FastAPI(title="Skin Disease Detection API")

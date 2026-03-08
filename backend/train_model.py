@@ -6,9 +6,9 @@ from tqdm import tqdm
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 
-from preprocessing import preprocess_image
-from segmentation import segment_lesion
-from feature_extraction import extract_features
+from backend.preprocessing import preprocess_image
+from backend.segmentation import segment_lesion
+from backend.feature_extraction import extract_features
 
 
 # =========================
