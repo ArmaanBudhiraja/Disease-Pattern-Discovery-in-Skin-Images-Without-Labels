@@ -243,17 +243,6 @@ Output
   "similar_images": [...]
 }
 ```
-
----
-
-# Team Members
-
-Armaan Budhiraja
-
-Chawla Tanish Vishal
-
-Khose Yash Ninad
-
 ---
 
 # Future Improvements
