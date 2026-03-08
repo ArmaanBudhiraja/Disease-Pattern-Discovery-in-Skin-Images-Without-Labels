@@ -62,3 +62,127 @@ Similar Image Retrieval
 ↓
 Results Displayed in Web Interface
 ```
+
+---
+
+# Tech Stack
+
+### Frontend
+- React
+- Vite
+- TailwindCSS
+- ShadCN UI
+
+### Backend
+- FastAPI
+
+### Machine Learning / Image Processing
+- OpenCV
+- NumPy
+- Scikit-Learn
+- Scikit-Image
+
+### Deployment
+- Vercel (Frontend)
+- Render (Backend)
+
+---
+
+# Project Structure
+
+``` bash
+Disease-Pattern-Discovery-in-Skin-Images-Without-Labels
+
+backend
+│
+├── main.py
+├── predict.py
+├── preprocessing.py
+├── segmentation.py
+├── feature_extraction.py
+├── explainability.py
+├── retrieval.py
+├── train_model.py
+├── visualization.py
+│
+├── model.pkl
+├── scaler.pkl
+├── feature_database.pkl
+└── image_paths.pkl
+
+
+frontend
+│
+├── index.html
+├── package.json
+├── vite.config.ts
+│
+└── src
+    ├── pages
+    │   └── Index.tsx
+    ├── components
+    ├── hooks
+    └── lib
+    └── main.tsx
+    └── App.tsx
+    └── index.css
+
+dataset
+│
+├──train
+    └── Actinic keratosis
+    └── Atopic Dermatitis 
+    └── Benign keratosis 
+    └── Dermatofibroma 
+    └── Melanocytic nevus 
+    └── Melanoma 
+    └── Squamous cell carcinoma 
+    └── Tinea Ringworm Candidiasis 
+    └── Vascular lesion
+└──val
+    └── Actinic keratosis
+    └── Atopic Dermatitis 
+    └── Benign keratosis 
+    └── Dermatofibroma 
+    └── Melanocytic nevus 
+    └── Melanoma 
+    └── Squamous cell carcinoma 
+    └── Tinea Ringworm Candidiasis 
+    └── Vascular lesion
+```
+
+---
+
+# Installation
+
+## Clone the repository
+
+```bash
+git clone https://github.com/ArmaanBudhiraja/Disease-Pattern-Discovery-in-Skin-Images-Without-Labels.git
+cd disease-pattern-discovery
+```
+
+---
+
+## Backend Setup
+
+Navigate to backend folder:
+``` bash
+cd backend
+```
+Install dependencies:
+``` bash
+pip install -r requirements.txt
+```
+Run the backend server:
+``` bash
+uvicorn backend.main:app --reload
+```
+Backend will run at:
+``` bash
+http://127.0.0.1:8000
+```
+API documentation:
+``` bash
+http://127.0.0.1:8000/docs
+```
