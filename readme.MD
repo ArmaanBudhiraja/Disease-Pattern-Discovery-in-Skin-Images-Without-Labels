@@ -186,3 +186,86 @@ API documentation:
 ``` bash
 http://127.0.0.1:8000/docs
 ```
+## Frontend Setup
+
+Navigate to frontend folder:
+``` bash
+cd frontend
+```
+Install dependencies:
+``` bash
+npm install
+```
+Run development server:
+``` bash
+npm run dev
+```
+Frontend will run at:
+``` bash
+http://localhost:8080
+```
+
+---
+
+# Model Training
+
+To retrain the model on a dataset:
+``` bash
+python train_model.py
+```
+This will generate:
+
+- model.pkl
+- scaler.pkl
+- feature_database.pkl
+- image_paths.pkl
+
+These files are required for prediction and retrieval.
+
+---
+
+# API Endpoint
+## POST /predict
+
+Upload a skin lesion image to get prediction results.
+
+Input
+``` bash
+multipart/form-data
+file: image
+```
+Output
+``` bash
+{
+  "prediction": "Melanoma",
+  "probabilities": {...},
+  "processing_images": {...},
+  "similar_images": [...]
+}
+```
+
+---
+
+# Team Members
+
+Armaan Budhiraja
+
+Chawla Tanish Vishal
+
+Khose Yash Ninad
+
+---
+
+# Future Improvements
+
+- Integrate Grad-CAM based explainability
+
+- Improve lesion segmentation using clustering techniques
+
+- Hybrid deep learning + classical feature pipeline
+
+- Mobile deployment for real-time skin analysis
+
+# License
+
+This project is developed for academic and research purposes.
