@@ -6,7 +6,6 @@ def generate_heatmap(image):
 
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
-    # compute gradients
     grad_x = cv2.Sobel(gray, cv2.CV_64F, 1, 0, ksize=3)
     grad_y = cv2.Sobel(gray, cv2.CV_64F, 0, 1, ksize=3)
 

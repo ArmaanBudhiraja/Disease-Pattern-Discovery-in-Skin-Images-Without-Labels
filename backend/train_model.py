@@ -10,25 +10,13 @@ from backend.preprocessing import preprocess_image
 from backend.segmentation import segment_lesion
 from backend.feature_extraction import extract_features
 
-
-# =========================
-# Dataset path
-# =========================
-
 dataset_path = "dataset/train"
-
 
 features = []
 labels = []
 image_paths = []
 
-
 print("\nStarting dataset processing...\n")
-
-
-# =========================
-# Load dataset images
-# =========================
 
 for disease in os.listdir(dataset_path):
 
@@ -45,7 +33,7 @@ for disease in os.listdir(dataset_path):
 
         try:
 
-            img, _, _, _ = preprocess_image(path)
+            img, _, _ = preprocess_image(path)
 
             lesion, _ = segment_lesion(img)
 
@@ -57,28 +45,16 @@ for disease in os.listdir(dataset_path):
 
             image_paths.append(path)
 
-        except Exception as e:
-
+        except Exception:
             print("Skipping image:", path)
-
 
 features = np.array(features)
 
 print("\nTotal training samples:", len(features))
 
-
-# =========================
-# Feature Scaling
-# =========================
-
 scaler = StandardScaler()
 
 features_scaled = scaler.fit_transform(features)
-
-
-# =========================
-# Train SVM model
-# =========================
 
 print("\nTraining SVM classifier...\n")
 
@@ -86,24 +62,11 @@ model = SVC(kernel="rbf", probability=True)
 
 model.fit(features_scaled, labels)
 
-
-# =========================
-# Save model + scaler
-# =========================
-
 joblib.dump(model, "model.pkl")
-
 joblib.dump(scaler, "scaler.pkl")
 
-
-# =========================
-# Save retrieval database
-# =========================
-
 joblib.dump(features_scaled, "feature_database.pkl")
-
 joblib.dump(image_paths, "image_paths.pkl")
-
 
 print("\nTraining complete!\n")
 
