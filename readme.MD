@@ -37,3 +37,22 @@ Case-based retrieval of similar images from the dataset
 Interactive web interface for uploading and analyzing images
 
 ## System Architecture
+
+User Upload Image
+        ↓
+Image Preprocessing
+        ↓
+Lesion Segmentation
+        ↓
+Feature Extraction
+(Color + Texture + Structure)
+        ↓
+Feature Scaling
+        ↓
+SVM Classification
+        ↓
+Explainability Heatmap
+        ↓
+Similar Image Retrieval
+        ↓
+Results Displayed in Web Interface
