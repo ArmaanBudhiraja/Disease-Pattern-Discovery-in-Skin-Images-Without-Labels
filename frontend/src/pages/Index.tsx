@@ -23,7 +23,7 @@ const DISEASE_DESCRIPTIONS: Record<string, string> = {
 
 const DISEASES = Object.keys(DISEASE_DESCRIPTIONS);
 
-const API_URL = "https://disease-pattern-discovery-in-skin-images.onrender.com";
+const API_URL = "https://disease-pattern-discovery-in-skin-images.onrender.com/predict";
 
 const Index = () => {
   const [preview, setPreview] = useState<string | null>(null);
